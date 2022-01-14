@@ -1,0 +1,10 @@
+.App {
+  padding: 6em 2em;
+  width: 800px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

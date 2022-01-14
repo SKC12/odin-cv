@@ -1,25 +1,56 @@
-import logo from './logo.svg';
-import './App.css';
+import { Component } from "react";
+import "./styles/App.css";
+import { Input } from "./components/Input";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      name: "",
+      email: "",
+      phone: "",
+      education: [],
+      experience: [],
+    };
+
+    this.updateName = this.updateName.bind(this);
+    this.updateEmail = this.updateEmail.bind(this);
+    this.updatePhone = this.updatePhone.bind(this);
+  }
+
+  updateName(e) {
+    this.setState({
+      name: e.target.value,
+    });
+    console.log(this.state);
+  }
+
+  updateEmail(e) {
+    this.setState({
+      email: e.target.value,
+    });
+    console.log(this.state);
+  }
+
+  updatePhone(e) {
+    this.setState({
+      phone: e.target.value,
+    });
+    console.log(this.state);
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <div className="input-container">
+          <Input category="Name:" cb={this.updateName}></Input>
+          <Input category="E-Mail:" cb={this.updateEmail}></Input>
+          <Input category="Telephone:" cb={this.updatePhone}></Input>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;

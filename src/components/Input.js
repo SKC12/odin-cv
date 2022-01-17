@@ -13,6 +13,7 @@ export class Input extends Component {
           className="input"
           placeholder={this.props.category}
           onChange={this.props.cb}
+          value={this.props.val}
         ></input>
       </div>
     );

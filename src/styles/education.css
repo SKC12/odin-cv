@@ -1,0 +1,30 @@
+.input,
+.date-input {
+  border: none;
+  width: 10em;
+  font-size: 1em;
+  background-color: rgb(248, 248, 248);
+  gap: 20px;
+}
+
+.input {
+  width: 15em;
+}
+
+.date-container {
+  display: flex;
+  gap: 2em;
+}
+
+.edu-item-container {
+  width: 50em;
+  display: flex;
+  gap: 2em;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.9em;
+}
+
+.input-container {
+  padding-top: 1em;
+}
